@@ -1,1 +1,1 @@
-select id from {{ ref('stg_orders' )}} where id < 0
+select order_id from {{ ref('stg_orders' )}} where order_id < 0

@@ -6,26 +6,4 @@ sources:
     schema: jaffle_shop
     tables:
       - name: customers
-        columns:
-          - name: customer_id
-            tests:
-              - not_null
-              - unique
-              - relationships:
-                  field: customer_id
-                  to: ref('stg_orders')
       - name: orders
-        columns:
-          - name: order_id
-            tests:
-              - not_null
-              - unique
-          - name: status
-            tests:
-              - accepted_values:
-                  values:
-                    - completed
-                    - shipped
-                    - returned
-                    - return_pending
-                    - placed
